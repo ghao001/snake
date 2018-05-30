@@ -16,15 +16,15 @@ void Fruit::draw(sf::RenderWindow &frt)
 	fTexture.loadFromFile("apple.png");
 	sf::RectangleShape rect(sf::Vector2f(20.0f, 20.0f));
 	rect.setTexture(&fTexture);
-	rect.setPosition(x, y);
+	rect.setPosition(20*x, 20*y);
 	frt.draw(rect);
 }
 void Fruit::generate()
 {
 	unsigned seed = time(0);
 	srand(0);
-	x = (rand() % 500 + 1);
-	y = (rand() % 500 + 1);
+	x = (rand() % 25 + 1);
+	y = (rand() % 25 + 1);
 }
 
 Fruit::~Fruit()
