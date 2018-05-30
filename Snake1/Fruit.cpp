@@ -6,7 +6,7 @@
 Fruit::Fruit()
 {
 	unsigned seed = time(0);
-	srand(0);
+	srand(seed);
 	x = (rand() % 25 + 1);
 	y = (rand() % 25 + 1);
 }
@@ -22,7 +22,7 @@ void Fruit::draw(sf::RenderWindow &frt)
 void Fruit::generate()
 {
 	unsigned seed = time(0);
-	srand(0);
+	srand(seed);
 	x = (rand() % 25 + 1);
 	y = (rand() % 25 + 1);
 }
